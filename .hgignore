@@ -1,0 +1,3 @@
+
+syntax: regexp
+^src/openlpwebapp/db/songs\.sqlite$
