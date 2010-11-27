@@ -1,8 +1,17 @@
 @CHARSET "UTF-8";
 
+.songTitle{
+  color: #333333;
+}
+
 .lyrics{
-		
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 800px;
 }
 
 .verse {
+  padding: 10px 10px 10px 20px;
+  background-color: #EDEFF4;		
 }

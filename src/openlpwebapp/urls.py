@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from django.conf import settings
 from openlpwebapp.songs import views
 
 # Uncomment the next two lines to enable the admin:
@@ -16,6 +17,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
     
+    (r'^resources/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.STATIC_ROOT}),
     (r'^$', views.search_songs),
     (r'^lyrics/(\d+)$', views.song_lyrics),    
 )
