@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if song %}
+     {{song.title}}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+   
+  {% if song %}
+     <h2>{{song.title}}</h2>
+     
+     <ul class="lyrics">
+     {% autoescape off %}
+         {% for verse in verses %}
+            <li class="verse">{{verse}}</li>
+         {% endfor %}
+     {% endautoescape %}
+     </ul>
+  {% endif %}
+  
+{% endblock %}

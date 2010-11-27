@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title%}
+Search songs
+{% endblock %}
+
+{% block content %}
+<h2>Search songs</h2>
+
+{% if form.errors %}
+  <p style="color: red;">
+   Please correct the error{{ form.errors|pluralize }} below.
+  </p>  
+{% endif %}
+
+<form action="" method="get">
+   <table>
+     {{form.as_table}}
+   </table>
+</form>
+
+{% if songs %}
+ <p>Found {{songs|length}} song{{songs|pluralize}} matching <strong>{{query}}</strong></p> 
+   <table>
+        {% for song in songs %}
+        <tr>
+          <td><a href="lyrics/{{ song.id }}">{{ song.title }}</a></td>
+        </tr>
+        {% endfor %}
+   </table>
+{% else %}    
+   {% if query %}
+      <p>No songs matched your search criteria.</p>
+   {% endif %}
+       
+{% endif %}
+
+{% endblock %}
