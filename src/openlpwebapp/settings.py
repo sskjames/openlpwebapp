@@ -4,6 +4,9 @@ import os.path
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+#used as starting point for various other paths
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
@@ -11,7 +14,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = os.path.join(os.path.dirname(__file__), 'db/songs.sqlite')             # Or path to database file if using sqlite3.
+DATABASE_NAME = os.path.join(SITE_ROOT, 'db/songs.sqlite')             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -70,19 +73,19 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\', '/'),
+    os.path.join(SITE_ROOT, 'templates').replace('\\', '/'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
-    'django.core.context_processors.static',
+    'django.core.context_processors.request',    
     'django.contrib.auth.context_processors.auth',
-    'django.contrib.messages.context_processors.messages',
+    'django.contrib.messages.context_processors.messages',    
 )
 
-STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'resources')
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'resources')
 
 INSTALLED_APPS = (
     'django.contrib.auth',

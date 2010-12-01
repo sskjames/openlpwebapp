@@ -6,7 +6,7 @@ from openlpwebapp.songs import views
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('tmcsjlyrics',
     # Example:
     # (r'^openlpwebapp/', include('openlpwebapp.foo.urls')),
 
@@ -17,8 +17,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
     
-    (r'^resources/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': settings.STATIC_ROOT}),
     (r'^$', views.search_songs),
-    (r'^lyrics/(\d+)$', views.song_lyrics),    
+    url(r'^lyrics/(\d+)$', views.song_lyrics, name="lyrics"),    
 )

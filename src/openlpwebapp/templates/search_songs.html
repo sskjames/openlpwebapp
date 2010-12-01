@@ -22,9 +22,10 @@ Search songs
 {% if songs %}
  <p>Found {{songs|length}} song{{songs|pluralize}} matching <strong>{{query}}</strong></p> 
    <table>
+        <p>Request path {{ request.path }} </p>
         {% for song in songs %}
         <tr>
-          <td><a href="lyrics/{{ song.id }}">{{ song.title }}</a></td>
+          <td><a href="{% url lyrics song.id %}">{{ song.title }}</a></td>
         </tr>
         {% endfor %}
    </table>
