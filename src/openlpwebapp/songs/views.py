@@ -25,7 +25,8 @@ def song_lyrics(request, song_id):
     song = songs[0]      
     formattedLyrics = getFormattedLyrics(song.lyrics)
     formattedLyrics = formattedLyrics.replace("\n", "<br>")
-    return render_to_response('song_lyrics.html', {'song':song, 'verses':formattedLyrics.split("\r")})
+    return render_to_response('song_lyrics.html', {'song':song, 'verses':formattedLyrics.split("\r")},
+                              context_instance=RequestContext(request))
 
 def getFormattedLyrics(lyricsXml):    
     dom = parseString(lyricsXml.encode("utf-8"))

@@ -3,8 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>{% block title %}{% endblock %}</title>
-<link href="/resources/css/style.css" type="text/css" rel="stylesheet">
+<link href="{{ MEDIA_URL }}/css/style.css" type="text/css" rel="stylesheet">
+{% block media %}
+{% endblock %}
 </head>
+
 <body>
    {% block content %} {% endblock %}
    
