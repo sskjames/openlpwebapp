@@ -1,17 +1,100 @@
 @CHARSET "UTF-8";
 
-.songTitle{
-  color: #333333;
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent none repeat scroll 0 0;
+	border: 0 none;
+	margin: 0;
+	outline-style: none;
+	outline-width: 0;
+	padding: 0;
 }
 
-.lyrics{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  width: 800px;
+body {
+	color: #484848;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	min-width: 900px;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ color:#333333;
+ font-size:13px;
+}
+
+#topBar {
+	background-color: #6B6B6B;
+	height: 41px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+#mainContainer {
+	width: 980px;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#appTitle {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.4em;
+	padding: 5px;
+}
+
+#content {
+	margin: 15px auto;
+	padding: 5px; #
+	border: 1px solid #B3B3B3;
+}
+
+.pageTitle {
+    font-size: 16px;
+}
+
+#songSearchFormContainer{
+  padding-top: 5px;
+}
+
+#songSearchResultContainer{
+  padding: 0px 5px 10px 0;
+}
+
+#songSearchResultSummary{
+  padding: 3px 0 5px 0;
+}
+
+.songTitle {
+	color: #333333;
+}
+
+.lyrics {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 800px;
 }
 
 .verse {
-  padding: 10px 10px 10px 20px;
-  background-color: #EDEFF4;		
+	padding: 10px 10px 10px 20px;
+	background-color: #EDEFF4;
+}
+
+#footer {
+	border-top: 1px solid #EEEEEE;
+	margin-bottom: 30px;
+	padding: 8px;
+	position: relative;
+	color: #808080;
+}
+
+#rightFooter {
+       float: right;
 }

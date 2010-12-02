@@ -5,7 +5,7 @@ Search songs
 {% endblock %}
 
 {% block content %}
-<h2>Search songs</h2>
+<h2 class="pageTitle">Search songs</h2>
 
 {% if form.errors %}
   <p style="color: red;">
@@ -13,16 +13,22 @@ Search songs
   </p>  
 {% endif %}
 
+<div id="songSearchFormContainer">
 <form action="" method="get">
    <table>
      {{form.as_table}}
    </table>
 </form>
+</div>
 
 {% if songs %}
- <p>Found {{songs|length}} song{{songs|pluralize}} matching <strong>{{query}}</strong></p> 
-   <table>
-        <p>Request path {{ request.path }} </p>
+<div id="songSearchResultContainer">
+ 
+ <div id="songSearchResultSummary">
+  Found {{songs|length}} song{{songs|pluralize}} matching <strong>{{query}}</strong>
+ </div> 
+ 
+   <table>        
         {% for song in songs %}
         <tr>
           <td><a href="{% url lyrics song.id %}">{{ song.title }}</a></td>
@@ -33,7 +39,7 @@ Search songs
    {% if query %}
       <p>No songs matched your search criteria.</p>
    {% endif %}
-       
+ </div>       
 {% endif %}
 
 {% endblock %}

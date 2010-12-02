@@ -3,18 +3,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>{% block title %}{% endblock %}</title>
-<link href="{{ MEDIA_URL }}css/style.css" type="text/css" rel="stylesheet">
-{% block media %}
-{% endblock %}
+<link href="{{ MEDIA_URL }}css/style.css" type="text/css"
+	rel="stylesheet">
+{% block media %} {% endblock %}
 </head>
 
 <body>
-   {% block content %} {% endblock %}
-   
-   {% block footer %}
-     <div>
-     Powered by Django/Python
-     </div>
-   {% endblock %}
+<!--  Top bar -->
+<div id="topBar"></div>
+
+<!--  Main container -->
+<div id="mainContainer">
+
+    <span id="appTitle">App title</span>
+    
+    <!-- Content -->
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- Footer --> 
+    {% block footer %}
+        <div id="footer">            
+            <span id="leftFooter">Powered by Django/Python</span>
+            <span id="rightFooter">&copy; 2010 James Selvakumar</span>
+        </div>
+    {% endblock %}
+
+</div>
+
 </body>
 </html>
