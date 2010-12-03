@@ -14,11 +14,11 @@ Search songs
 {% endif %}
 
 <div id="songSearchFormContainer">
-<form action="" method="get">
-   <table>
-     {{form.as_table}}
-   </table>
-</form>
+    <form action="" method="get">
+        <table>
+            {{form.as_table}}
+        </table>
+    </form>    
 </div>
 
 {% if songs %}
@@ -27,19 +27,24 @@ Search songs
  <div id="songSearchResultSummary">
   Found {{songs|length}} song{{songs|pluralize}} matching <strong>{{query}}</strong>
  </div> 
- 
-   <table>        
+  
+  <div id="songSearchResults">
+      <table>        
         {% for song in songs %}
         <tr>
           <td><a href="{% url lyrics song.id %}">{{ song.title }}</a></td>
         </tr>
         {% endfor %}
-   </table>
+      </table>
+   </div>
+</div>
+
 {% else %}    
    {% if query %}
       <p>No songs matched your search criteria.</p>
-   {% endif %}
- </div>       
+   {% endif %}     
+ 
 {% endif %}
+
 
 {% endblock %}

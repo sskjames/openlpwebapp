@@ -18,7 +18,7 @@ def search_songs(request):
                                   context_instance=RequestContext(request))
     else:
         form = SongSearchForm()
-        return render_to_response('search_songs.html', {'form':form})
+        return render_to_response('search_songs.html', {'form':form}, context_instance=RequestContext(request))
     
 def song_lyrics(request, song_id):
     songs = Song.objects.filter(id=song_id)      

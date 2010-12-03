@@ -15,20 +15,17 @@
 <!--  Main container -->
 <div id="mainContainer">
 
-    <span id="appTitle">App title</span>
+    <span id="siteName">{{ SITE_NAME }}</span>    
     
-    <!-- Content -->
-    <div id="content">
-        {% block content %} {% endblock %}
-    </div>
+    <div id="content">    
+        {% block content %}{% endblock %}
+    </div>    
 
-    <!-- Footer --> 
-    {% block footer %}
-        <div id="footer">            
-            <span id="leftFooter">Powered by Django/Python</span>
-            <span id="rightFooter">&copy; 2010 James Selvakumar</span>
-        </div>
-    {% endblock %}
+    <!-- Footer -->
+    <div id="footer">
+        <span id="leftFooter">Powered by Django/Python</span>
+        <span id="rightFooter">&copy; 2010 James Selvakumar</span>      
+    </div>
 
 </div>
 

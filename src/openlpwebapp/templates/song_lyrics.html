@@ -9,15 +9,17 @@
 {% block content %}
    
   {% if song %}
-     <h2 class="songTitle">{{song.title}}</h2>
+     <h2 class="pageTitle">{{song.title}}</h2>
      
-     <ul class="lyrics">
-     {% autoescape off %}
-         {% for verse in verses %}
-            <li class="verse">{{verse}}</li>
-         {% endfor %}
-     {% endautoescape %}
-     </ul>
+     <div id="lyricsContainer">
+         <ul id="lyrics">
+             {% autoescape off %}
+                 {% for verse in verses %}
+                     <li class="verse">{{verse}}</li>
+                 {% endfor %}
+             {% endautoescape %}
+         </ul>
+     </div>
   {% endif %}
   
 {% endblock %}

@@ -27,6 +27,15 @@ h1, h2, h3, h4, h5, h6 {
  font-size:13px;
 }
 
+input[type="text"]{
+ -moz-box-sizing:border-box;
+ border:0 none;
+ outline:0 none;
+ width:100%;
+ border:1px solid #BDC7D8;
+ padding: 3px 3px 0 3px;
+}
+
 #topBar {
 	background-color: #6B6B6B;
 	height: 41px;
@@ -42,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 5px;
 }
 
-#appTitle {
+#siteName {
 	color: #FFFFFF;
 	font-weight: bold;
 	font-size: 1.4em;
@@ -51,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #content {
 	margin: 15px auto;
-	padding: 5px; #
+	padding: 5px; 
 	border: 1px solid #B3B3B3;
 }
 
@@ -60,7 +69,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #songSearchFormContainer{
-  padding-top: 5px;
+  padding-top: 10px;
+}
+
+#songSearchFormContainer table {
+  border:0 none;
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+#songSearchFormContainer input[type="text"]{
+  width: 25em;
+}
+
+#songSearchFormContainer table td{  
+  padding:0px 10px
 }
 
 #songSearchResultContainer{
@@ -68,23 +91,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #songSearchResultSummary{
-  padding: 3px 0 5px 0;
+  padding: 5px 0 5px 0;
 }
 
-.songTitle {
-	color: #333333;
+#songSearchResults {
+  padding-top: 5px;
 }
 
-.lyrics {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	width: 800px;
+#songSearchResults table{  
+  width: 100%;
+}
+
+#songSearchResults table td{  
+   padding: 0 10px 5px 0;
+}
+
+#songSearchResults a {
+  text-decoration: none;  
+}
+
+#lyricsContainer {
+  padding: 5px;  
+}
+
+#lyrics {
+ list-style-type: none;
 }
 
 .verse {
-	padding: 10px 10px 10px 20px;
-	background-color: #EDEFF4;
+ padding-bottom: 5px;
 }
 
 #footer {

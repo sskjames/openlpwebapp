@@ -4,12 +4,15 @@ import os.path
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-#used as starting point for various other paths
+# used as starting point for various other paths
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
+
+# this will appear in the top bar
+SITE_NAME = 'Site name'
 
 MANAGERS = ADMINS
 
@@ -84,6 +87,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',    
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',    
+    'openlpwebapp.context_processors.constants',
 )
 
 INSTALLED_APPS = (
