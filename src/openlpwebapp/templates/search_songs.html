@@ -13,6 +13,13 @@ Search songs
   </p>  
 {% endif %}
 
+{% if not query %}
+    <div id="songSearchInfo">
+        <p class="info">Welcome to {{SITE_NAME}}.</p>
+        <p class="info">To start your search, enter the song title  and press "Enter".
+    </div>
+{% endif %}
+
 <div id="songSearchFormContainer">
     <form action="" method="get">
         <table>
@@ -38,12 +45,12 @@ Search songs
       </table>
    </div>
 </div>
+{% endif %}
 
-{% else %}    
-   {% if query %}
-      <p>No songs matched your search criteria.</p>
-   {% endif %}     
- 
+{% if not songs and query %}
+    <div id="noSongFound">
+        Sorry, but no songs were found matching <strong>{{query}}</strong>
+    </div>
 {% endif %}
 
 

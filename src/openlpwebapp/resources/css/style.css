@@ -62,10 +62,19 @@ input[type="text"]{
 	margin: 15px auto;
 	padding: 5px; 
 	border: 1px solid #B3B3B3;
+        min-height: 300px;
 }
 
 .pageTitle {
     font-size: 16px;
+}
+
+#songSearchInfo{
+  padding: 5px 0;
+}
+
+#songSearchInfo p.info{
+  padding-top: 3px;
 }
 
 #songSearchFormContainer{
@@ -88,6 +97,11 @@ input[type="text"]{
 
 #songSearchResultContainer{
   padding: 0px 5px 10px 0;
+}
+
+#noSongFound{
+ padding: 7px 0;
+ color: red; 
 }
 
 #songSearchResultSummary{

@@ -11,7 +11,9 @@ ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
 
-# FORCE_SCRIPT_NAME = '' # turn on this constant if you deploy in a sub directory. For example '/tmcsjlyrics'.
+# Give the appropriate value, if you are deploying in a sub directory of a domain 
+# Example: '/tmcsjlyrics'
+FORCE_SCRIPT_NAME = ''
 
 # this will appear in the top bar
 SITE_NAME = 'Site name'
@@ -50,6 +52,7 @@ MEDIA_ROOT = os.path.join(SITE_ROOT, "resources")
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
+# If you deploy in a sub directory, make sure you give the right prefix here
 MEDIA_URL = '/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
