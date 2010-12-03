@@ -11,6 +11,8 @@ ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
 
+# FORCE_SCRIPT_NAME = '' # turn on this constant if you deploy in a sub directory. For example '/tmcsjlyrics'.
+
 # this will appear in the top bar
 SITE_NAME = 'Site name'
 
