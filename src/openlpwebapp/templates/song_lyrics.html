@@ -12,13 +12,23 @@
      <h2 class="pageTitle">{{song.title}}</h2>
      
      <div id="lyricsContainer">
+     
+         <div class="backNavigation">
+             <a onClick="javascript:history.go(-1)">&lt;&lt; Back to search results</a>
+         </div>
+     
          <ul id="lyrics">
              {% autoescape off %}
                  {% for verse in verses %}
                      <li class="verse">{{verse}}</li>
                  {% endfor %}
              {% endautoescape %}
-         </ul>
+         </ul>     
+     
+         <div class="backNavigation">
+             <a onClick="javascript:history.go(-1)">&lt;&lt; Back to search results</a>
+         </div>
+     
      </div>
   {% endif %}
   

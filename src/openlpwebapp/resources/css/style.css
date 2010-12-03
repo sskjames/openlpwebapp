@@ -140,6 +140,18 @@ input[type="text"] {
 	padding-bottom: 5px;
 }
 
+.backNavigation {
+  color: blue;  
+}
+
+.backNavigation a{
+   cursor: pointer;
+}
+
+#lyricsContainer .backNavigation{
+  padding-top: 5px;
+}
+
 #footer {
 	border-top: 1px solid #EEEEEE;
 	margin-bottom: 30px;

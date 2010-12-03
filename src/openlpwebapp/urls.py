@@ -20,5 +20,6 @@ urlpatterns = patterns('',
     
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     (r'^$', views.search_songs),
+    url(r'^home$', views.search_songs, name="home"),
     url(r'^lyrics/(\d+)$', views.song_lyrics, name="lyrics"),    
 )

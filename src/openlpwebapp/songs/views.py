@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 from openlpwebapp.songs.models import Song
 from openlpwebapp.songs.forms import SongSearchForm
 from xml.dom.minidom import parseString
-from django.template.context import RequestContext
+from django.template.context import RequestContext 
 
 def search_songs(request):
     form = SongSearchForm(request.GET)
