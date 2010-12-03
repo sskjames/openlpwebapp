@@ -22,18 +22,18 @@ body {
 	padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
- color:#333333;
- font-size:13px;
+h1,h2,h3,h4,h5,h6 {
+	color: #333333;
+	font-size: 13px;
 }
 
-input[type="text"]{
- -moz-box-sizing:border-box;
- border:0 none;
- outline:0 none;
- width:100%;
- border:1px solid #BDC7D8;
- padding: 3px 3px 0 3px;
+input[type="text"] {
+	-moz-box-sizing: border-box;
+	border: 0 none;
+	outline: 0 none;
+	width: 100%;
+	border: 1px solid #BDC7D8;
+	padding: 3px 3px 0 3px;
 }
 
 #topBar {
@@ -52,88 +52,92 @@ input[type="text"]{
 }
 
 #siteName {
+	padding: 5px;
+}
+
+#siteName a {
 	color: #FFFFFF;
 	font-weight: bold;
 	font-size: 1.4em;
-	padding: 5px;
+	text-decoration: none;
 }
 
 #content {
 	margin: 15px auto;
-	padding: 5px; 
+	padding: 5px;
 	border: 1px solid #B3B3B3;
-        min-height: 300px;
+	min-height: 300px;
 }
 
 .pageTitle {
-    font-size: 16px;
+	font-size: 16px;
 }
 
-#songSearchInfo{
-  padding: 5px 0;
+#songSearchInfo {
+	padding: 5px 0;
 }
 
-#songSearchInfo p.info{
-  padding-top: 3px;
+#songSearchInfo p.info {
+	padding-top: 3px;
 }
 
-#songSearchFormContainer{
-  padding-top: 10px;
+#songSearchFormContainer {
+	padding-top: 10px;
 }
 
 #songSearchFormContainer table {
-  border:0 none;
-  border-collapse:collapse;
-  border-spacing:0;
+	border: 0 none;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-#songSearchFormContainer input[type="text"]{
-  width: 25em;
+#songSearchFormContainer input[type="text"] {
+	width: 25em;
 }
 
-#songSearchFormContainer table td{  
-  padding:0px 10px
+#songSearchFormContainer table td {
+	padding: 0px 10px
 }
 
-#songSearchResultContainer{
-  padding: 0px 5px 10px 0;
+#songSearchResultContainer {
+	padding: 0px 5px 10px 0;
 }
 
-#noSongFound{
- padding: 7px 0;
- color: red; 
+#noSongFound {
+	padding: 7px 0;
+	color: red;
 }
 
-#songSearchResultSummary{
-  padding: 5px 0 5px 0;
+#songSearchResultSummary {
+	padding: 5px 0 5px 0;
 }
 
 #songSearchResults {
-  padding-top: 5px;
+	padding-top: 5px;
 }
 
-#songSearchResults table{  
-  width: 100%;
+#songSearchResults table {
+	width: 100%;
 }
 
-#songSearchResults table td{  
-   padding: 0 10px 5px 0;
+#songSearchResults table td {
+	padding: 0 10px 5px 0;
 }
 
 #songSearchResults a {
-  text-decoration: none;  
+	text-decoration: none;
 }
 
 #lyricsContainer {
-  padding: 5px;  
+	padding: 5px;
 }
 
 #lyrics {
- list-style-type: none;
+	list-style-type: none;
 }
 
 .verse {
- padding-bottom: 5px;
+	padding-bottom: 5px;
 }
 
 #footer {
@@ -145,5 +149,5 @@ input[type="text"]{
 }
 
 #rightFooter {
-       float: right;
+	float: right;
 }

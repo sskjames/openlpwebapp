@@ -15,7 +15,9 @@
 <!--  Main container -->
 <div id="mainContainer">
 
-    <span id="siteName">{{ SITE_NAME }}</span>    
+    <span id="siteName">
+        <a href="/">{{ SITE_NAME }}</a>
+    </span>    
     
     <div id="content">    
         {% block content %}{% endblock %}
